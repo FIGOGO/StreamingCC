@@ -1,3 +1,5 @@
+// Copyright 2019 Yan Song
+
 #include "../src/streamingcc_include/treap.h"
 #include <ctime>
 #include <cstdlib>
