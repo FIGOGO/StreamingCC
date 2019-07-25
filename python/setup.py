@@ -36,6 +36,13 @@ ext_modules = [
         include_dirs = ['../src/streamingcc_include/'],
         extra_compile_args=['-std=c++11'],
         language='c++'
+    ),
+    Extension(
+        'streamingcc._treap',
+        sources=['streamingcc/_treap.pyx'] + all_cc_files,
+        include_dirs = ['../src/streamingcc_include/'],
+        extra_compile_args=['-std=c++11'],
+        language='c++'
     )
 ]
 
