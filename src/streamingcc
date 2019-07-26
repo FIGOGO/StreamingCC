@@ -10,5 +10,6 @@
 #include "streamingcc_include/sampling.h"
 #include "streamingcc_include/bloom_filter.h"
 #include "streamingcc_include/hyper_loglog.h"
+#include "streamingcc_include/treap.h"
 
 #endif  // SRC_STREAMINGCC

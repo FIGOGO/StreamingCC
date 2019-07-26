@@ -3,9 +3,7 @@
 #ifndef SRC_STREAMINGCC_INCLUDE_TREAP_H_
 #define SRC_STREAMINGCC_INCLUDE_TREAP_H_
 
-#include <random>
-#include <ctime>
-#include <cstdlib>
+#include "../streamingcc_include/util.h"
 
 namespace streamingcc {
 
@@ -13,6 +11,7 @@ template <typename T>
 // struct for tree node to store single data of
 // any comparable type
 struct treeNode {
+ public:
     treeNode* parent;
     treeNode* lc;
     treeNode* rc;
@@ -26,12 +25,6 @@ struct treeNode {
         lc = nullptr;
         rc = nullptr;
         height = 0;
-    }
-    treeNode(T value, int height, double priority) {
-        treeNode();
-        this->value = value;
-        this->height = height;
-        this->priority = priority;
     }
 };
 
@@ -62,8 +55,8 @@ class Treap {
  public:
     // Constructor
     Treap() {
-        this->root = new treeNode<T>();
-        this->_size = 0;
+        root = new treeNode<T>();
+        _size = 0;
     }
     // Destructor
     ~Treap() { destroyRecursive(this->root); }
@@ -72,5 +65,7 @@ class Treap {
     bool contains(T val) { return contains(this->root, val); }
 };
 
+
 }  // namespace streamingcc
 #endif  // SRC_STREAMINGCC_INCLUDE_TREAP_H_
+
